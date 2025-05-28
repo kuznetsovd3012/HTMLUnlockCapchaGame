@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lockpicking HTML Version</title>
+  
+  <!-- Підключаємо зовнішній CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Панель (аналог вашого panel в Unity) -->
+  <div id="panel" style="display:none;">
+    <span id="attemptText">Try: 0</span>
+    
+    <div class="pins-container" id="pinsContainer">
+      <!-- 5 пінів -->
+      <div class="pin" id="pin0"></div>
+      <div class="pin" id="pin1"></div>
+      <div class="pin" id="pin2"></div>
+      <div class="pin" id="pin3"></div>
+      <div class="pin" id="pin4"></div>
+
+      <!-- "Відмичка" -->
+      <img id="lockpick" src="Lockpicking1.png" alt="Lockpick">
+    </div>
+    
+    <div id="buttons">
+      <button onclick="LockpickingUI.closePanel()">Close</button>
+    </div>
+    
+    <div id="message"></div>
+  </div>
+  
+  <!-- Кнопка, що відкриває "замок" -->
+  <div style="text-align:center; margin-top:50px;">
+    <button onclick="LockpickingUI.showLockpickingPanel(3)">Відкрити “замок” (складність 3)</button>
+  </div>
+  
+  <!-- Підключаємо JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
